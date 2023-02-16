@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"esp_lcd_panel_ops.h": "c",
+			"*.inc": "c",
+			"task.h": "c",
+			"random": "c",
+			"gpio.h": "c",
+			"complex": "c",
+			"esp_log.h": "c",
+			"bitset": "c",
+			"chrono": "c",
+			"algorithm": "c",
+			"esp_lcd_panel_gc9107.h": "c"
+		}
+	}
+}
