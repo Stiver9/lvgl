@@ -269,8 +269,12 @@ static void animation_task(void *pvParameter) {
     prepare_animation_lvgl(scr);
 
     while (1) {
+        
+        if (pdTRUE == xSemaphoreTake(xGuiSemaphore, portMAX_DELAY)) {
+            animation_lvgl(scr);        
+            xSemaphoreGive(xGuiSemaphore);
+        }
         /* Delay 1 tick (assumes FreeRTOS tick is 10ms */
-        animation_lvgl(scr);
         vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
